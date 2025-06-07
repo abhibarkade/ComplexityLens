@@ -2,6 +2,14 @@
 
 A simple, plain, and lightweight VS Code plugin to check code complexity in TypeScript and JavaScript files. No fancy stuff—just a straightforward tool to help you identify complex functions and manage code quality.
 
+---
+
+## 🎬 Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/qu0ZiNHgI_s/hqdefault.jpg)](https://www.youtube.com/watch?v=qu0ZiNHgI_s)
+
+---
+
 ## Overview
 
 ComplexityLens calculates the **cyclomatic complexity** of functions in your TypeScript and JavaScript code and displays the "Risk" level directly in the editor. It uses simple icons and colors to indicate whether a function's complexity is within acceptable limits, warrants a warning, or indicates an error based on configurable thresholds.

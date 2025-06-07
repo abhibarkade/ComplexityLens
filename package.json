@@ -1,10 +1,17 @@
 {
     "name": "complexity-lens",
+    "publisher": "abhibarkade",
     "displayName": "ComplexityLens",
     "description": "Displays code complexity of TypeScript/JavaScript methods inline",
-    "version": "0.0.1",
+    "version": "1.0.1",
     "author": "abhibarkade <103316455+abhibarkade@users.noreply.github.com>",
     "license": "MIT",
+    "icon": "app_icon.png",
+    "keywords": ["complexity", "lens", "code", "analysis", "typescript", "javascript", "quality"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/abhibarkade/ComplexityLens.git"
+    },
     "engines": {
         "vscode": "^1.74.0"
     },
