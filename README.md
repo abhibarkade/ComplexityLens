@@ -26,14 +26,6 @@ ComplexityLens calculates the **cyclomatic complexity** of functions in your Typ
 4. Click **Install**.
 5. Reload VS Code if prompted.
 
-### Manual Installation
-
-Alternatively, you can install it manually:
-
-1. Download the `.vsix` file from the [VS Code Marketplace](https://marketplace.visualstudio.com/) or the [releases section](https://github.com/your-repo/complexitylens/releases) of this repository.
-2. In VS Code, go to the **Extensions** view, click the `...` menu, and select **Install from VSIX**.
-3. Select the downloaded `.vsix` file and install.
-
 ## Usage
 
 Once activated, ComplexityLens automatically analyzes your TypeScript and JavaScript files and displays the complexity of each function in the editor. The complexity is shown above each function with an icon and a risk score:
@@ -49,24 +41,6 @@ You can enable or disable ComplexityLens using the command palette:
 1. Open the **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
 2. Type `ComplexityLens: Toggle` and select it.
 3. A message will confirm whether the plugin is enabled or disabled.
-
-## Configuration
-
-ComplexityLens allows you to customize the thresholds for warnings and errors via VS Code settings. To configure:
-
-1. Go to **File > Preferences > Settings** (or `Ctrl+,` / `Cmd+,`).
-2. Search for `ComplexityLens`.
-3. Adjust the following settings:
-
-- `ComplexityLens.warningThreshold` (default: `10`): The complexity value at which a function is considered a moderate risk (⚠️, orange).
-- `ComplexityLens.errorThreshold` (default: `15`): The complexity value at which a function is considered a high risk (❌, red).
-
-### Example
-
-If a function has a complexity of `12`:
-
-- If `warningThreshold` is `10` and `errorThreshold` is `15`, it will show ⚠️ in orange.
-- If you change `warningThreshold` to `5` and `errorThreshold` to `10`, it will show ❌ in red.
 
 ## How Complexity is Calculated
 
