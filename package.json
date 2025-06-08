@@ -3,7 +3,7 @@
     "publisher": "abhibarkade",
     "displayName": "ComplexityLens",
     "description": "Displays code complexity of TypeScript/JavaScript methods inline",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "author": "abhibarkade <103316455+abhibarkade@users.noreply.github.com>",
     "license": "MIT",
     "icon": "app_icon.png",
