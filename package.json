@@ -3,7 +3,7 @@
     "publisher": "abhibarkade",
     "displayName": "ComplexityLens",
     "description": "Displays code complexity of TypeScript/JavaScript methods inline",
-    "version": "1.0.4",
+    "version": "2.0.0",
     "author": "abhibarkade <103316455+abhibarkade@users.noreply.github.com>",
     "license": "MIT",
     "icon": "app_icon.png",
@@ -13,7 +13,7 @@
         "url": "https://github.com/abhibarkade/ComplexityLens.git"
     },
     "engines": {
-        "vscode": "^1.74.0"
+        "vscode": "^1.85.0"
     },
     "categories": [
         "Other"
@@ -21,7 +21,8 @@
     "activationEvents": [
         "onLanguage:typescript",
         "onLanguage:javascript",
-        "onCommand:ComplexityLens.toggle"
+        "onCommand:ComplexityLens.toggle",
+        "onCommand:ComplexityLens.configure"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -29,6 +30,10 @@
             {
                 "command": "ComplexityLens.toggle",
                 "title": "ComplexityLens: Toggle Complexity Display"
+            },
+            {
+                "command": "ComplexityLens.configure",
+                "title": "ComplexityLens: Configure Thresholds and Styles"
             }
         ],
         "configuration": {
@@ -37,18 +42,63 @@
                 "ComplexityLens.warningThreshold": {
                     "type": "number",
                     "default": 10,
-                    "description": "Complexity threshold for yellow highlight"
+                    "description": "Complexity threshold for warning level"
                 },
                 "ComplexityLens.errorThreshold": {
                     "type": "number",
                     "default": 15,
-                    "description": "Complexity threshold for red highlight"
+                    "description": "Complexity threshold for error level"
+                },
+                "ComplexityLens.lowComplexityColor": {
+                    "type": "string",
+                    "default": "green",
+                    "description": "Color for low complexity decorations"
+                },
+                "ComplexityLens.lowComplexityIcon": {
+                    "type": "string",
+                    "default": "✅",
+                    "description": "Icon for low complexity decorations"
+                },
+                "ComplexityLens.lowComplexityMessage": {
+                    "type": "string",
+                    "default": "Risk",
+                    "description": "Message for low complexity decorations"
+                },
+                "ComplexityLens.warningComplexityColor": {
+                    "type": "string",
+                    "default": "orange",
+                    "description": "Color for warning complexity decorations"
+                },
+                "ComplexityLens.warningComplexityIcon": {
+                    "type": "string",
+                    "default": "⚠️",
+                    "description": "Icon for warning complexity decorations"
+                },
+                "ComplexityLens.warningComplexityMessage": {
+                    "type": "string",
+                    "default": "Risk",
+                    "description": "Message for warning complexity decorations"
+                },
+                "ComplexityLens.errorComplexityColor": {
+                    "type": "string",
+                    "default": "red",
+                    "description": "Color for error complexity decorations"
+                },
+                "ComplexityLens.errorComplexityIcon": {
+                    "type": "string",
+                    "default": "❌",
+                    "description": "Icon for error complexity decorations"
+                },
+                "ComplexityLens.errorComplexityMessage": {
+                    "type": "string",
+                    "default": "Risk",
+                    "description": "Message for error complexity decorations"
                 }
             }
         }
     },
     "dependencies": {
-        "ts-morph": "22.0.0"
+        "ts-morph": "^23.0.0"
     },
     "scripts": {
         "vscode:prepublish": "yarn compile",
@@ -56,8 +106,8 @@
         "watch": "tsc -watch -p ./"
     },
     "devDependencies": {
-        "@types/node": "20.14.2",
-        "@types/vscode": "^1.74.0",
-        "typescript": "^4.9.3"
+        "@types/node": "^20.14.2",
+        "@types/vscode": "^1.85.0",
+        "typescript": "^5.3.3"
     }
 }

@@ -1,6 +1,6 @@
 # ComplexityLens
 
-A simple, plain, and lightweight VS Code plugin to check code complexity in TypeScript and JavaScript files. No fancy stuff—just a straightforward tool to help you identify complex functions and manage code quality.
+A simple, plain, and lightweight VS Code plugin to check code complexity in TypeScript and JavaScript files. No fancy stuff—just a straightforward tool to help you identify complex functions and manage code quality with full customization over how complexity is displayed.
 
 ---
 
@@ -12,10 +12,11 @@ A simple, plain, and lightweight VS Code plugin to check code complexity in Type
 
 ## Overview
 
-ComplexityLens calculates the **cyclomatic complexity** of functions in your TypeScript and JavaScript code and displays the "Risk" level directly in the editor. It uses simple icons and colors to indicate whether a function's complexity is within acceptable limits, warrants a warning, or indicates an error based on configurable thresholds.
+ComplexityLens calculates the **cyclomatic complexity** of functions in your TypeScript and JavaScript code and displays the "Risk" level directly in the editor. It uses customizable icons, colors, and messages to indicate whether a function's complexity is within acceptable limits, warrants a warning, or signals an error based on user-defined thresholds. With complete control over all settings, you can tailor the plugin to fit your team's coding standards.
 
 - **Lightweight**: Minimal dependencies and no unnecessary features.
 - **Simple**: Displays complexity with basic icons (✅, ⚠️, ❌) and color-coded text.
+- **Fully Customizable**: Adjust thresholds, messages, colors, and icons to match your preferences.
 - **Focused**: Works only with TypeScript and JavaScript files, targeting function complexity.
 
 ## Installation
@@ -33,6 +34,28 @@ Once activated, ComplexityLens automatically analyzes your TypeScript and JavaSc
 - ✅ **(Green)**: Complexity is below the warning threshold (low risk).
 - ⚠️ **(Orange)**: Complexity is between the warning and error thresholds (moderate risk).
 - ❌ **(Red)**: Complexity exceeds the error threshold (high risk).
+
+### Customizing Settings
+
+ComplexityLens offers **full customization** through a dedicated configuration panel, giving you control over every aspect of how complexity is displayed:
+
+1. Open the **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
+2. Type `ComplexityLens: Configure Thresholds and Styles` and select it.
+3. The configuration panel will open, allowing you to adjust:
+   - **Threshold Settings**:
+     - **Warning Threshold**: Set the complexity level for warnings (default: 10).
+     - **Error Threshold**: Set the complexity level for errors (default: 15).
+   - **Message Settings**:
+     - **Low Complexity Message**: Customize the message for low-risk functions (default: "Risk").
+     - **Warning Complexity Message**: Customize the message for warning-level functions (default: "Risk").
+     - **Error Complexity Message**: Customize the message for error-level functions (default: "Risk").
+   - **Color and Icon Settings**:
+     - **Low Complexity Color/Icon**: Set the color (e.g., "green", "#00FF00") and icon (e.g., ✅) for low-risk functions.
+     - **Warning Complexity Color/Icon**: Set the color (e.g., "orange", "#FFA500") and icon (e.g., ⚠️) for warning-level functions.
+     - **Error Complexity Color/Icon**: Set the color (e.g., "red", "#FF0000") and icon (e.g., ❌) for error-level functions.
+4. Click **Save** to apply changes or **Reset to Default** to revert to default settings.
+
+You can also fine-tune settings via VS Code’s Settings UI (`Ctrl+,` or `Preferences: Open Settings (UI)`) by searching for `ComplexityLens`.
 
 ### Toggling the Plugin
 
@@ -57,15 +80,6 @@ This metric helps you identify functions that might be too complex and need refa
 - TypeScript
 - JavaScript
 
-## Dependencies
-
-ComplexityLens relies on the following:
-
-- `vscode`: The VS Code API for editor integration.
-- `ts-morph`: A TypeScript compiler API wrapper for parsing and analyzing code.
-
-No other external dependencies are used, keeping the plugin lightweight.
-
 ## Limitations
 
 - Only works with TypeScript and JavaScript files.
@@ -87,5 +101,3 @@ Please ensure your changes align with the plugin's goal of remaining simple and 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Issues
